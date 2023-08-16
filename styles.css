@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+
+:root {
+    --border-color: #ff6363;
+}
+
+@font-face {
+    font-family: Bebas;
+    src: url('./fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: Staatch;
+    src: url('./fonts/Staatliches/Staatliches-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Bagel';
+    src: url('./fonts/Bagel_Fat_One/BagelFatOne-Regular.ttf');
+}
+
+
+body {
+    background-color: #f9b4ae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+#start-cover {
+    background-color: #f8f7d0;
+    margin-top: 8.5rem;
+    margin-bottom: 5rem;
+    width: 50rem;
+    height: 35rem;
+    border-radius: 7px;
+    border: 5px solid var(--border-color); 
+    position: absolute; 
+    z-index: 10; 
+}
+
+
+
+#start-cover h1 {
+    margin: 12rem auto 0 auto; 
+    font-size: 3rem;
+    color: var(--border-color);
+}
+
+
+#start {
+    display: flex; 
+}
+
+
+#start-btn {
+    width: 7.5rem;
+    height: 3rem;
+    margin: 3rem auto; 
+    font-weight: bold; 
+    padding-bottom: .2rem;
+    background-color: #c2affe;
+    color: white; 
+    font-family: 'Quicksand';
+    border-radius: 7px;
+    border: 3px solid #7B57C5;;
+    font-size: 1.3rem;
+
+}
+
+#start-btn:hover {
+    background-color: #9adcf8;
+    color: #2673da;
+    border: 3px solid #2673da;
+}
+
+
+
+#quiz-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 50% 27% auto ;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    width: 50rem;
+    height: 35rem;
+    background-color: #f8f7d0;
+    border-radius: 7px;
+    border: 5px solid var(--border-color);
+}
+
+
+
+.question {
+    grid-column: span 2; 
+    margin-top: 0.6rem;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-family: 'Bagel';
+    font-size: 2.5rem;
+    color: #322C2C;
+}
+
+
+hr {
+    width: 75%;
+    border: .95px solid #322C2C;
+    border-radius: 5px;
+    margin: 1.5rem auto 0;
+}
+
+
+.fruit {
+    grid-column: span 2;
+    display: block;
+    text-align: center;
+}
+
+
+.fruit-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    width: 20rem;
+    background-color: white; 
+    margin: 0 auto;
+    border-radius: 11px; 
+    border: 4px solid var(--border-color);
+}
+
+
+.score-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 11px;
+    background-color: white;
+    margin: 0 auto;
+    border: 3px solid var(--border-color);
+}
+
+
+
+img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+
+
+.answer-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: span 2;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+
+.answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 21rem;
+    padding-bottom: 0.2rem;
+    font-family: 'Quicksand';
+    font-weight: bold; 
+    font-size: 1.5rem;
+    background-color: #9adcf8;
+    color: #2673da;
+    border: 3px solid #2673da;
+    border-radius: 5px;
+    
+}
+
+
+.answer:hover:not([disabled]) {
+    background-color: #2673da;
+    color: white;
+}
+
+
+.next {
+    grid-column: span 2;
+    justify-content: center;
+    display: flex;
+}
+
+
+#next-btn:hover {
+    background-color: #9adcf8;
+    color: #2673da;
+}
+
+
+#next-btn {
+    width: 8rem;
+    height: 2rem;
+    padding-bottom: 0.1rem;
+    font-family: 'Quicksand';
+    font-weight: bold; 
+    font-size: 1.2rem;
+    background-color: #2673da;
+    color: white; 
+    border-radius: 5px;
+    border: 3px solid #2673da;
+}
+
+
+
+.correct {
+    background-color: rgb(83, 239, 178, .9);
+    border: 3px solid #42bf8e;
+    color: white;
+}
+
+
+.incorrect {
+    background-color: rgb(255, 83, 54, .5);
+    border: 3px solid rgb(255, 83, 54); 
+    color: white;
+}
+
+
+.reset {
+    opacity: 0%;
+}
+
+
+.score {
+    margin-bottom: 6rem;
+}
+
+
+#prog-container {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+
+#progress {
+    height: 8px; 
+    width: 45%;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+    border: 2.5px solid black;
+  }
+  
+  #prog-bar {
+    background-color: #c2affe;
+    position: absolute; 
+    height: 100%; 
+    width:10%;
+    border-radius: 10px; 
+  }
+
+
+  #fruit-count {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family:'Quicksand';
+  }
